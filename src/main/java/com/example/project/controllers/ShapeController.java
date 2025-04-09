@@ -87,7 +87,7 @@ public class ShapeController {
 		    area = triangle.calculateArea();
 		    triangle.setArea(area);
 		    System.out.println(area);
-		    shapeservice.saveTriangle(triangle);
+//		    shapeservice.saveTriangle(triangle);
 			   
 		    Map<String, Double> responseMap = new HashMap<>();
 		    responseMap.put("area", area);
@@ -161,10 +161,10 @@ public class ShapeController {
 //		}
 
 		
-		@GetMapping("/all-triangles")
-		public List<Triangle> getAllTriangles() {
-			return shapeservice.getTriangles();
-		}
+//		@GetMapping("/all-triangles")
+//		public List<Triangle> getAllTriangles() {
+//			return shapeservice.getTriangles();
+//		}
 		
 		@GetMapping("/all-squares")
 		public List<Square> getAllSquares() {
