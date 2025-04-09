@@ -2,7 +2,6 @@ package com.example.project.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -15,24 +14,21 @@ import com.example.project.repository.CircleRepository;
 import com.example.project.repository.RectangleRepository;
 import com.example.project.repository.SquareRepository;
 import com.example.project.repository.TrapezoidRepository;
-import com.example.project.repository.TriangleRepository;
-
-import lombok.RequiredArgsConstructor;
 
 @Service
 @Profile("!docker")
 public class ShapeService {
 	
 	
-	private TriangleRepository triangleRepository;
+//	private TriangleRepository triangleRepository;triangleRepository
 	private SquareRepository squareRepository;
 	private RectangleRepository rectangleRepository;
 	private TrapezoidRepository trapezoidRepository;
 	private CircleRepository circleRepository;
 	
-	public ShapeService (TriangleRepository triangleRepository,SquareRepository squareRepository,RectangleRepository rectangleRepository,
+	public ShapeService (SquareRepository squareRepository,RectangleRepository rectangleRepository,
 			TrapezoidRepository trapezoidRepository,CircleRepository circleRepository	) {
-		this.triangleRepository = triangleRepository;
+//		this.triangleRepository = triangleRepository;
 		this.squareRepository = squareRepository;
 		this.rectangleRepository = rectangleRepository;
 		this.trapezoidRepository = trapezoidRepository;
@@ -40,11 +36,11 @@ public class ShapeService {
 	}
 	
 	
-	public double saveTriangle(Triangle triangle) {
-		triangleRepository.save(triangle);
-		
-		return triangle.getArea();
-	}
+//	public double saveTriangle(Triangle triangle) {
+//		triangleRepository.save(triangle);
+//
+//		return triangle.getArea();
+//	}
 	
 	public double saveSquare(Square square) {
         squareRepository.save(square);
@@ -67,9 +63,9 @@ public class ShapeService {
     }
 	
 	
-	public List<Triangle> getTriangles() {
-		return triangleRepository.findAll();
-	}
+//	public List<Triangle> getTriangles() {
+//		return triangleRepository.findAll();
+//	}
 	
 //	public double CalcAreaByBaseAndHeight(double base, double height) {
 //		Triangle tri = triangleRepository.findByBaseAndHeight(base, height);
