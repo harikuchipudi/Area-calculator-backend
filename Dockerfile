@@ -1,7 +1,9 @@
 # Use the official Maven image to build the project
 FROM maven:3.8.3-openjdk-17 AS build
-COPY . .
+COPY pom.xml .
+COPY src ./src
 RUN mvn clean install
+
 
 # Use the Eclipse Temurin image to run the application
 FROM eclipse-temurin:17-jdk
