@@ -23,9 +23,9 @@ import com.example.project.models.Triangle;
 
 
 
+@CrossOrigin(origins = "*") // or your frontend URL
 @RestController
 @RequestMapping("/api/shapes")
-@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class ShapeController {
 
 //	public ShapeService shapeservice;
